@@ -1,6 +1,6 @@
 function orderWeight(strng) {
     const arr = strng.split(" ").map(x=>[x]);
-    const weights = (strng.split(" ").map(x=>x.split("").reduce((a,b)=>parseInt(a)+parseInt(b)))); //.sort((c,d)=>c-d));
+    const weights = (strng.split(" ").map(x=>x.split("").reduce((a,b)=>parseInt(a)+parseInt(b),0))); //.sort((c,d)=>c-d));
 
     for (let i=0; i<arr.length; i++) {
         arr[i].unshift(weights[i]);
